@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fruits and Vegetables</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f8f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: green;
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+            gap: 30px;
+        }
+
+        .list {
+            width: 30%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        .list h2 {
+            color: green;
+        }
+
+        .item {
+            background-color: #e8f5e9;
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .item:hover {
+            background-color: #c8e6c9;
+        }
+
+        .details {
+            width: 70%;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+            text-align: center;
+        }
+
+        .details img {
+            width: 300px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .details h2 {
+            color: green;
+        }
+
+        .details p {
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .details ul {
+            text-align: left;
+            display: inline-block;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🍎 Fruits and 🥕 Vegetables</h1>
+
+    <div class="container">
+
+        <!-- LEFT SIDE -->
+        <div class="list">
+
+            <h2>🍎 Fruits</h2>
+
+            <div class="item" onclick="showFood('apple')">
+                🍎 Apple
+            </div>
+
+            <div class="item" onclick="showFood('banana')">
+                🍌 Banana
+            </div>
+
+            <div class="item" onclick="showFood('orange')">
+                🍊 Orange
+            </div>
+
+            <div class="item" onclick="showFood('mango')">
+                🥭 Mango
+            </div>
+
+
+            <h2>🥕 Vegetables</h2>
+
+            <div class="item" onclick="showFood('carrot')">
+                🥕 Carrot
+            </div>
+
+            <div class="item" onclick="showFood('tomato')">
+                🍅 Tomato
+            </div>
+
+            <div class="item" onclick="showFood('spinach')">
+                🥬 Spinach
+            </div>
+
+            <div class="item" onclick="showFood('potato')">
+                🥔 Potato
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+        <div class="details" id="details">
+
+            <h2>Click on a fruit or vegetable</h2>
+
+            <p>
+                Select any item from the left side
+                to see its picture, vitamins and benefits.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function showFood(food) {
+
+            let details = document.getElementById("details");
+
+            if (food === "apple") {
+
+                details.innerHTML = `
+                    <h2>🍎 Apple</h2>
+
+                    <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=500">
+
+                    <h3>Vitamins and Nutrients</h3>
+
+                    <ul>
+                        <li>Vitamin C</li>
+                        <li>Vitamin K</li>
+                        <li>Fiber</li>
+                        <li>Potassium</li>
+                    </ul>
+
+                    <h3>Benefits</h3>
+
+                    <ul>
+                        <li>Supports heart health</li>
+                        <li>Helps digestion</li>
+                        <li>Provides antioxidants</li>
+                        <li>Helps maintain a healthy diet</li>
+                    </ul>
+
+                    <h3>What we gain</h3>
+                    <p>
+                        Apples provide fiber, antioxidants and important
+                        nutrients that support overall health.
+                    </p>
+                `;
+            }
+
+
+            else if (food === "banana") {
+
+                details.innerHTML = `
+                    <h2>🍌 Banana</h2>
+
+                    <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=500">
+
+                    <h3>Vitamins and Nutrients</h3>
+
+                    <ul>
+                        <li>Vitamin B6</li>
+                        <li>Vitamin C</li>
+                        <li>Potassium</li>
+                        <li>Fiber</li>
+                    </ul>
+
+                    <h3>Benefits</h3>
+
+                    <ul>
+                        <li>Provides quick energy</li>
+                        <li>Supports muscle function</li>
+                        <li>Helps digestion</li>
+                        <li>Supports heart health</li>
+                    </ul>
+
+                    <h3>What we gain</h3>
+                    <p>
+                        Bananas provide carbohydrates, potassium and
+                        vitamin B6 that help support energy and normal body function.
+                    </p>
+                `;
+            }
+
+
+            else if (food === "orange") {
+
+                details.innerHTML = `
+                    <h2>🍊 Orange</h2>
+
+                    <img src="https://images.unsplash.com/photo-1582979512210-99b6a53386f9?w=500">
+
+                    <h3>Vitamins and Nutrients</h3>
+
+                    <ul>
+                        <li>Vitamin C</li>
+                        <li>Folate</li>
+                        <li>Fiber</li>
+                        <li>Potassium</li>
+                    </ul>
+
+                    <h3>Benefits</h3>
+
+                    <ul>
+                        <li>Supports immune function</li>
+                        <li>Supports healthy skin</li>
+                        <li>Helps digestion</li>
+                        <li>Provides antioxidants</li>
+                    </ul>
+
+                    <h3>What we gain</h3>
+                    <p>
+                        Oranges provide vitamin C, fluids and fiber,
+                        making them a nutritious fruit choice.
+                    </p>
+                `;
+            }
+
+
+            else if (food === "mango") {
+
+                details.innerHTML = `
+                    <h2>🥭 Mango</h2>
+
+                    <img src="https://images.unsplash.com/photo-1553279768-865429fa0078?w=500">
+
+                    <h3>Vitamins and Nutrients</h3>
+
+                    <ul>
+                        <li>Vitamin A</li>
+                        <li>Vitamin C</li>
+                        <li>Vitamin E</li>
+                        <li>Folate</li>
+                    </ul>
+
+                    <h3>Benefits</h3>
+
+                    <ul>
+                        <li>Supports immune function</li>
+                        <li>Supports eye health</li>
+                        <li>Provides antioxidants</li>
+                        <li>Supports healthy skin</li>
+                    </ul>
+
+                    <h3>What we gain</h3>
+                    <p>
+                        Mango provides vitamins, antioxidants and
+                        carbohydrates as part of a balanced diet.
+                    </p>
+                `;
+            }
+
+
+            else if (food === "carrot") {
+
+                details.innerHTML = `
+                    <h2>🥕 Carrot</h2>
+
+                    <img src="https://images.unsplash.com/photo-1445282768818-728615cc910a?w=500">
+
+                    <h3>Vitamins and Nutrients</h3>
+
+                    <ul>
+                        <li>Vitamin A</li>
+                        <li>Vitamin K</li>
+                        <li>Fiber</li>
+                        <li>Potassium</li>
+                    </ul>
+
+                    <h3>Benefits</h3>
+
+                    <ul>
+                        <li>Supports eye health</li>
+                        <li>Supports immune function</li>
+                        <li>Provides antioxidants</li>
+                        <li>Supports digestion</li>
+                    </ul>
+
+                    <h3>What we gain</h3>
+                    <p>
+                        Carrots are rich in beta-carotene, which the body
+                        can convert into vitamin A.
+                    </p>
+                `;
+            }
+
+
+            else if (food === "tomato") {
+
+                details.innerHTML = `
+                    <h2>🍅 Tomato</h2>
+
+                    <img src="https://images.unsplash.com/photo-1546094096-0df4bcaaa337?w=500">
+
+                    <h3>Vitamins and Nutrients</h3>
+
+                    <ul>
+                        <li>Vitamin C</li>
+                        <li>Vitamin K</li>
+                        <li>Folate</li>
+                        <li>Potassium</li>
+                    </ul>
+
+                    <h3>Benefits</h3>
+
+                    <ul>
+                        <li>Provides antioxidants</li>
+                        <li>Supports heart health</li>
+                        <li>Supports healthy skin</li>
+                        <li>Provides hydration</li>
+                    </ul>
+
+                    <h3>What we gain</h3>
+                    <p>
+                        Tomatoes provide vitamin C, potassium and
+                        antioxidant compounds such as lycopene.
+                    </p>
+                `;
+            }
+
+
+            else if (food === "spinach") {
+
+                details.innerHTML = `
+                    <h2>🥬 Spinach</h2>
+
+                    <img src="https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=500">
+
+                    <h3>Vitamins and Nutrients</h3>
+
+                    <ul>
+                        <li>Vitamin A</li>
+                        <li>Vitamin C</li>
+                        <li>Vitamin K</li>
+                        <li>Folate</li>
+                        <li>Iron</li>
+                    </ul>
+
+                    <h3>Benefits</h3>
+
+                    <ul>
+                        <li>Supports bone health</li>
+                        <li>Supports normal blood function</li>
+                        <li>Provides antioxidants</li>
+                        <li>Supports overall nutrition</li>
+                    </ul>
+
+                    <h3>What we gain</h3>
+                    <p>
+                        Spinach provides several vitamins, minerals and
+                        antioxidants as part of a balanced diet.
+                    </p>
+                `;
+            }
+
+
+            else if (food === "potato") {
+
+                details.innerHTML = `
+                    <h2>🥔 Potato</h2>
+
+                    <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=500">
+
+                    <h3>Vitamins and Nutrients</h3>
+
+                    <ul>
+                        <li>Vitamin C</li>
+                        <li>Vitamin B6</li>
+                        <li>Potassium</li>
+                        <li>Fiber</li>
+                    </ul>
+
+                    <h3>Benefits</h3>
+
+                    <ul>
+                        <li>Provides energy</li>
+                        <li>Supports muscle function</li>
+                        <li>Provides potassium</li>
+                        <li>Provides vitamin C</li>
+                    </ul>
+
+                    <h3>What we gain</h3>
+                    <p>
+                        Potatoes provide carbohydrates for energy along
+                        with potassium and other nutrients.
+                    </p>
+                `;
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
